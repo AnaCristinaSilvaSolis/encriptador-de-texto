@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador de texto - desafio Alura</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <header>
+    <h1><img src="./assets/img/Logo.svg" alt="logo" class="logo"></h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="caja-texto">
+        <textarea placeholder="Realizado por Ana Solis. Ingrese el texto aquí" cols="30" rows="10" class="textarea" id="textarea"></textarea>
+
+        <div class="alerta">
+          <p><i class="bi bi-exclamation-circle-fill"></i>  Solo letras minúsculas y sin acentos</p>
+        </div>
+
+        <div class="botones">
+          <button class="btn-encriptar" onclick="encriptar()">Encriptar</button>
+          <button class="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
+        </div>
+      </div> 
+
+      <div class="encriptado">
+        <img src="./assets/img/welcome.svg" alt="" id="muneco" class="muneco">
+
+        <div class="parrafo-encriptado"     id="parrafo-encriptado">
+          <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+          <p id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap');
+
+:root{
+  --main-color: #F3F5FC;
+  --logo-color: #0A3871;
+  --btn-des: #D8DFE8;
+  --text-color-claro: #495057;
+  --text: #343A40;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background-color: var(--main-color);
+}
+
+.logo{
+  padding: 0.5%;
+}
+
+
+.container{
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+}
+
+.textarea{
+  position: absolute;
+  width: 42%;
+  height: 60%;
+  left: 12%;
+  top: 15%;
+  border: none;
+  resize: none;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background-color: var(--main-color);
+}
+
+.textarea::placeholder{
+  color: var(--logo-color);
+}
+
+.textarea:focus, 
+.textarea:active{
+  border: none;
+  outline: none;
+}
+
+.alerta{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 77%;
+}
+
+.alerta p{
+  font-size: 13px;
+  line-height: 150%;
+}
+
+.botones{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1% 0;
+  width: 80%;
+  left: 12%;
+  top: 82%;
+  gap: 10px;
+}
+
+.btn-encriptar{
+  padding: 2%;
+  width: 25%;
+  border-radius: 24px;
+  background-color: var(--logo-color);
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-desencriptar{
+  padding: 2%;
+  width: 25%;
+  border: 1px solid var(--logo-color);
+  border-radius: 24px;
+  background-color: var(--btn-des);
+  color: var(--logo-color);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-encriptar:hover,
+.btn-desencriptar:hover{
+  margin: 0.3%;
+  padding: 1.8%;
+  width: 24.5%;
+}
+
+.encriptado{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 24%;
+  height: 90%;
+  left: 62%;
+  top: 2%;
+  background-color: #fff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+}
+
+.encriptado .muneco{
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  top: 10%;
+
+}
+
+.parrafo-encriptado{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1%;
+  gap: 16px;
+  width: 100%;
+  top: 60%;
+}
+
+.parrafo-encriptado h2{
+  width: 60%;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--text);
+}
+
+.parrafo-encriptado p{
+  width: 80%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--text-color-claro);
+}
+
+/* responsive */
+@media screen and (max-width: 768px){
+  .logo{
+    padding: 1%;
+  }
+
+  .container{
+    display: flex;
+  }
+
+
+  .caja-texto{
+    width: 100%;
+  }
+
+  .textarea{
+    width: 80%;
+    height: 54%;
+    left: 10%;
+    top: 5%;
+  }
+
+  .alerta{
+    width: 80%;
+    left: 10%;
+    top: 60%;
+  }
+
+  .alerta p{
+    font-size: 16px;
+  }
+
+  .botones{
+    width: 80%;
+    left: 10%;
+    top: 64%;
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar{
+    width: 48%;
+    border-radius: 16px;
+  }
+
+  .btn-encriptar:hover,
+  .btn-desencriptar:hover{
+    margin: 0.3%;
+    padding: 1.8%;
+    width: 47.5%;
+  }
+
+  .encriptado{
+    width: 80%;
+    height: 20%;
+    left: 10%;
+    top: 75%;
+  }
+
+  .encriptado .muneco{
+    display: none;
+    visibility: hidden;
+  }
+
+  .parrafo-encriptado{
+    width: 100%;
+    top: 5%;
+  }
+
+  .parrafo-encriptado h2{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 368px){
+  .textarea{
+    height: 50%;
+    font-size: 24px;
+  }
+
+  .alerta{
+    top: 57%;
+  }
+
+  .alerta p{
+    font-size: 12px;
+  }
+
+  .botones{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    top: 60%;
+    height: 35%;
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar{
+    width: 100%;
+    height: 20%;
+    border-radius: 16px;
+  }
+
+  .btn-encriptar:hover,
+  .btn-desencriptar:hover{
+    margin: 0.3%;
+    padding: 1.8%;
+    width: 101%;
+  }
+
+  .encriptado{
+    top: 80%;
+  }
+
+  .parrafo-encriptado{
+    top: 0%;
+  }
+}
